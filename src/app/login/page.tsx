@@ -2,7 +2,7 @@
 
 export default function LoginPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-[var(--color-background)] px-4">
+    <main className="min-h-screen flex items-center justify-center  px-4">
       <div className="bg-[var(--color-card-bg)] bg-opacity-90 backdrop-blur-md shadow-xl rounded-2xl p-8 w-full max-w-md">
         <h2 className="text-3xl font-bold text-[var(--color-primary)] text-center mb-6">
           Anmelden
@@ -45,7 +45,7 @@ export default function LoginPage() {
         </form>
 
         <p className="text-sm text-center text-[var(--color-text)] mt-6">
-          Noch kein Konto? <a href="/register" className="text-[var(--color-primary)] underline">Registrieren</a>
+          Noch kein Konto? <a href="/register" className="text-[var(--color-texts)] underline">Registrieren</a>
         </p>
       </div>
     </main>
