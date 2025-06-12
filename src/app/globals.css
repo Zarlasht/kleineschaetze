@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+:root {
+    --color-background:#eff7f6;
+    --color-headings: #f4a261;
+    --color-texts: #26534b;
+    --color-bg-button: #2a9d8f;
+    --color-bg-btn-hover: #f4a261;
+
+
+
+
+}
+
+body {
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  color: var(--color-primary);
+  font-family: sans-serif;
+}
