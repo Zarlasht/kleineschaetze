@@ -6,10 +6,7 @@
     --color-texts: #26534b;
     --color-bg-button: #2a9d8f;
     --color-bg-btn-hover: #f4a261;
-
-
-
-
+    --color-card-bg: #e9f8f6;
 }
 
 body {
@@ -20,4 +17,10 @@ body {
   min-height: 100vh;
   color: var(--color-primary);
   font-family: sans-serif;
+}
+h1, h2,h3{
+    color: var(--color-headings);
+}
+p {
+    color: var(--color-texts);
 }
