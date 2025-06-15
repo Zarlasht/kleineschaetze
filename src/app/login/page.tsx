@@ -10,12 +10,12 @@ export default function LoginPage() {
 
         <form className="space-y-5">
           <div>
-            <label htmlFor="email" className="block text-md font-medium text-[var(--color-texts)] mb-1">
+            <label className="block text-md font-medium text-[var(--color-texts)] mb-1">
               E-Mail-Adresse
             </label>
             <input
               type="email"
-              id="email"
+              name="email"
               className="w-full px-4 py-2 border border-[var(--color-border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-texts)]"
               placeholder="deine@email.de"
               required
@@ -23,12 +23,12 @@ export default function LoginPage() {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-md font-medium text-[var(--color-texts)] mb-1">
+            <label className="block text-md font-medium text-[var(--color-texts)] mb-1">
               Passwort
             </label>
             <input
               type="password"
-              id="password"
+              name="password"
               className="w-full px-4 py-2 border border-[var(--color-border)]
               rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-texts)]"
               placeholder="••••••••"

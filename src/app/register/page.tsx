@@ -9,12 +9,12 @@ export default function RegisterPage() {
 
         <form className="space-y-5">
           <div>
-            <label htmlFor="name" className="block text-md font-medium text-[var(--color-texts)] mb-1">
+            <label  className="block text-md font-medium text-[var(--color-texts)] mb-1">
               Dein Name
             </label>
             <input
               type="text"
-              id="name"
+              name="name"
               className="w-full px-4 py-2 border border-[var(--color-border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-texts)]"
               placeholder="Vor- und Nachname"
               required
@@ -22,12 +22,12 @@ export default function RegisterPage() {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-md font-medium text-[var(--color-texts)] mb-1">
+            <label  className="block text-md font-medium text-[var(--color-texts)] mb-1">
               E-Mail-Adresse
             </label>
             <input
               type="email"
-              id="email"
+              name="email"
               className="w-full px-4 py-2 border border-[var(--color-border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-texts)]"
               placeholder="deine@email.de"
               required
@@ -40,7 +40,7 @@ export default function RegisterPage() {
             </label>
             <input
               type="password"
-              id="password"
+              name="password"
               className="w-full px-4 py-2 border border-[var(--color-border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-texts)]"
               placeholder="••••••••"
               required
@@ -48,12 +48,12 @@ export default function RegisterPage() {
           </div>
 
           <div>
-            <label htmlFor="confirmPassword" className="block text-md font-medium text-[var(--color-texts)] mb-1">
+            <label  className="block text-md font-medium text-[var(--color-texts)] mb-1">
               Passwort bestätigen
             </label>
             <input
               type="password"
-              id="confirmPassword"
+              name="confirmPassword"
               className="w-full px-4 py-2 border border-[var(--color-border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-texts)]"
               placeholder="••••••••"
               required
