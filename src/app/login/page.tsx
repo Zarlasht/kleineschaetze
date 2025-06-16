@@ -1,3 +1,4 @@
+import {loginUser} from "./action";
 
 
 export default function LoginPage() {
@@ -8,7 +9,7 @@ export default function LoginPage() {
           Anmelden
         </h2>
 
-        <form className="space-y-5">
+        <form className="space-y-5" action={loginUser} >
           <div>
             <label className="block text-md font-medium text-[var(--color-texts)] mb-1">
               E-Mail-Adresse

@@ -1,3 +1,6 @@
+"use client";
+
+import {registerUser} from "./action";
 
 export default function RegisterPage() {
   return (
@@ -7,7 +10,7 @@ export default function RegisterPage() {
           Registrieren
         </h2>
 
-        <form className="space-y-5">
+        <form className="space-y-5" action={registerUser} method="POST">
           <div>
             <label  className="block text-md font-medium text-[var(--color-texts)] mb-1">
               Dein Name
