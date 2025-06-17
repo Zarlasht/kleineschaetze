@@ -21,7 +21,7 @@ export async function addChild(formData: FormData) {
   }
 
   await sql`
-    INSERT INTO children (name, birthday, gender, avatar_url, user_id)
+    INSERT INTO children (name, birthday, gender, avatar_url, userId)
     VALUES (${name}, ${birthday}, ${gender}, ${avatar}, ${userId})
   `;
 

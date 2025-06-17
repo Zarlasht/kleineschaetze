@@ -25,15 +25,16 @@ export default function AddChildPage() {
         </select>
         <input
           name="avatar_url"
+          type="file"
           placeholder="Avatar URL (optional)"
           className="w-full border p-2"
         />
         <button
-          type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded"
-        >
-          Speichern
-        </button>
+            type="submit"
+            className="w-full bg-[var(--color-bg-button)] hover:bg-[var(--color-bg-btn-hover)] text-white py-2 rounded-lg text-lg font-medium transition"
+          >
+            Speichern
+          </button>
       </form>
     </div>
   );
