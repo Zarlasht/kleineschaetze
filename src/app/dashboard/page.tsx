@@ -31,8 +31,8 @@ export default async function DashboardPage() {
 
   return (
     <div className="flex min-h-screen">
-      <aside className="w-64 p-6 border bg-opacity-90 backdrop-blur-md">
-        <div className="mb-6">
+      <aside className="w-70 p-6 border-r-2 border-[var(--color-border)] bg-opacity-90 backdrop-blur-sm">
+        <div className="mb-10">
           <p className="text-[var(--color-texts)] text-lg font-medium">
             👋 Hallo, {user?.name || "Mama"}!
           </p>
@@ -42,7 +42,7 @@ export default async function DashboardPage() {
         </div>
 
         <Link href="/dashboard/add-child">
-          <button className="w-full bg-[var(--color-bg-button)] hover:bg-[var(--color-bg-btn-hover)] text-white py-2 px-3 rounded-lg text-lg font-medium transition">
+          <button className=" bg-[var(--color-bg-button)] hover:bg-[var(--color-bg-btn-hover)] text-white py-2 px-3 rounded-lg text-lg font-medium transition">
             ➕ Kind hinzufügen
           </button>
         </Link>
@@ -62,7 +62,7 @@ export default async function DashboardPage() {
               return (
                 <Link key={child.id} href={`/dashboard/child/${child.id}`}>
                   <div
-                    className="cursor-pointer rounded-2xl p-4 shadow-md hover:shadow-lg transition"
+                    className="cursor-pointer rounded-2xl p-4 shadow-md hover:shadow-[0_4px_20px_rgba(144,238,144,0.4)]  transition"
                     style={{ backgroundColor }}
                   >
                     {child.avatar_url ? (
@@ -77,7 +77,7 @@ export default async function DashboardPage() {
                       </div>
                     )}
 
-                    <h2 className="text-xl font-semibold text-center text-[var(--color-texts)]">
+                    <h2 className="text-xl font-bold text-center text-[var(--color-texts)] uppercase">
                       {child.name}
                     </h2>
                     <p className="text-sm text-center text-[var(--color-text)]">
