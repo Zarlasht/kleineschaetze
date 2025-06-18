@@ -20,7 +20,7 @@ export async function loginUser(prevState: any, formData: FormData) {
   }
 
   const cookieStore = await cookies();
-  cookieStore.set("user_id", user.id.toString(), {
+  cookieStore.set("userid", user.id.toString(), {
     httpOnly: true,
     secure: true,
     path: "/",
