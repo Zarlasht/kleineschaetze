@@ -5,19 +5,18 @@ import { cookies } from "next/headers";
 import sql from "@/lib/db";
 import { comparePassword } from "@/lib/hash";
 
-export async function loginUser(formData: FormData) {
+export async function loginUser(prevState: any, formData: FormData) {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
 
   const [user] = await sql`SELECT * FROM users WHERE email = ${email}`;
   if (!user) {
-    throw new Error("Benutzername oder Passwort ist falsch.");
+    return { error: "Benutzername oder Passwort ist falsch." };
   }
 
-  const passwordsMatch = await comparePassword(password, user.password); // ✅ richtiger Vergleich
-
+  const passwordsMatch = await comparePassword(password, user.password);
   if (!passwordsMatch) {
-    throw new Error("Benutzername oder Passwort ist falsch.");
+    return { error: "Benutzername oder Passwort ist falsch." };
   }
 
   const cookieStore = await cookies();

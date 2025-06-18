@@ -7,7 +7,6 @@ export default async function DashboardPage() {
 
   return (
     <div className="flex h-screen">
-      {/* Sidebar */}
       <aside className="w-64 bg-gray-100 p-6 border-r">
         <h2 className="text-xl font-semibold mb-4">👩‍👧‍👦 </h2>
         <Link href="/dashboard/add-child">
