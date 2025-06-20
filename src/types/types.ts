@@ -7,3 +7,10 @@ export interface User {
   created_at?: string;
 }
 
+export interface Memory{
+    id: number;
+    title: string;
+    image_url?: string;
+    description: string;
+    date: string;
+  };

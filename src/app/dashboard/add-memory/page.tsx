@@ -1,7 +1,6 @@
 import { addMemory } from "./action";
 import { cookies } from "next/headers";
 import sql from "@/lib/db";
-import { use } from "react";
 import { redirect } from "next/navigation";
 
 export default async function AddMemoryPage() {
