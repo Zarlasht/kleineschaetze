@@ -1,7 +1,9 @@
+import React from "react";
 import Link from "next/link";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import sql from "@/lib/db";
+import { logout } from "@/app/dashboard/action";
 
 function getAge(birthday: string) {
   const birthDate = new Date(birthday);
@@ -31,26 +33,42 @@ export default async function DashboardPage() {
 
   return (
     <div className="flex min-h-screen">
-      <aside className="w-70 p-6 border-r-2 border-[var(--color-border)] bg-opacity-90 backdrop-blur-sm">
-        <div className="mb-10">
+      <aside className="w-70 p-6 border-r-2 border-[var(--color-border)] bg-opacity-40 backdrop-blur-sm flex flex-col justify-between">
+        <div>
           <p className="text-[var(--color-texts)] text-lg font-medium">
             👋 Hallo, {user?.name || "Mama"}!
           </p>
-          <p className="text-sm text-[var(--color-text)]">
+          <p className="text-sm text-[var(--color-text)] mt-1">
             Schön, dass du da bist. Hier findest du alle Erinnerungen deiner Kinder.
           </p>
+
+          <div className="flex flex-col gap-4 mt-6">
+            <Link href="/dashboard/add-child">
+              <button className="w-full bg-[var(--color-bg-button)] hover:bg-[var(--color-bg-btn-hover)] text-white py-2 rounded-lg text-md font-medium transition">
+                ➕ Kind hinzufügen
+              </button>
+            </Link>
+            <Link href="/dashboard/add-memory">
+              <button className="w-full bg-[var(--color-bg-button)] hover:bg-[var(--color-bg-btn-hover)] text-white py-2 rounded-lg text-md font-medium transition">
+                ➕ Erinnerung hinzufügen
+              </button>
+            </Link>
+          </div>
         </div>
 
-        <Link href="/dashboard/add-child">
-          <button className=" bg-[var(--color-bg-button)] hover:bg-[var(--color-bg-btn-hover)] text-white py-2 px-3 rounded-lg text-lg font-medium transition">
-            ➕ Kind hinzufügen
+        <form action={logout} method="POST" className="mt-6">
+          <button
+            type="submit"
+            className="w-full bg-[var(--color-bg-button)] hover:bg-[var(--color-bg-btn-hover)] text-white py-2 rounded-lg text-md font-medium transition"
+          >
+            🚪 Abmelden
           </button>
-        </Link>
+        </form>
       </aside>
 
-      {/* Main Content */}
-      <main className="flex-1 p-8 ">
-        <h1 className="text-2xl font-bold mb-6 text-[var(--color-texts)]">Meine Kinder</h1>
+      {/* children */}
+      <section className="flex-1 p-8">
+        <h1 className="text-2xl font-bold mb-6 ]">Meine Kinder</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {children.length === 0 ? (
@@ -62,7 +80,7 @@ export default async function DashboardPage() {
               return (
                 <Link key={child.id} href={`/dashboard/child/${child.id}`}>
                   <div
-                    className="cursor-pointer rounded-2xl p-4 shadow-md hover:shadow-[0_4px_20px_rgba(144,238,144,0.4)]  transition"
+                    className="cursor-pointer rounded-2xl p-4 shadow-md hover:shadow-[0_4px_20px_rgba(144,238,144,0.4)] transition"
                     style={{ backgroundColor }}
                   >
                     {child.avatar_url ? (
@@ -93,7 +111,7 @@ export default async function DashboardPage() {
             })
           )}
         </div>
-      </main>
+      </section>
     </div>
   );
 }
