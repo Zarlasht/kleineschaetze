@@ -18,7 +18,6 @@ export default function LoginPage() {
 
   return (
     <main className="relative min-h-screen flex items-center justify-center px-4 ">
-      {/* Form container */}
       <div className={`bg-[var(--color-card-bg)] backdrop-blur-md shadow-xl rounded-2xl p-8 w-full max-w-md transition-all duration-300 ${showModal ? 'blur-sm scale-[0.98]' : ''}`}>
         <h2 className="text-3xl font-bold text-[var(--color-primary)] text-center mb-6">Anmelden</h2>
 
@@ -63,7 +62,6 @@ export default function LoginPage() {
         <>
           <div className="absolute inset-0 bg-black/20 backdrop-blur-sm z-10" />
 
-          {/* Error window */}
           <div className="absolute z-20 bg-white rounded-xl shadow-2xl p-6 w-[90%] max-w-sm mx-auto animate-fade-in">
             <h3 className="text-lg font-semibold text-red-600 mb-2">Fehler</h3>
             <p className="text-sm text-gray-800">{state.error}</p>

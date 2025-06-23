@@ -143,7 +143,7 @@ export default function DashboardContent({ user, children, memories }: any) {
                       <img
                         src={mem.image_url}
                         alt={mem.title}
-                        className="w-full h-40 object-cover rounded-xl mb-3"
+                        className="w-60 h-30 object-cover rounded-xl mb-3"
                       />
                     )}
                     <h3 className="text-lg font-semibold text-[var(--color-texts)] capitalize">
