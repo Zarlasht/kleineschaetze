@@ -79,7 +79,6 @@ export default function LoginPage() {
         </>
       )}
 
-      {/* Animation */}
       <style jsx>{`
         @keyframes fade-in {
           from {
