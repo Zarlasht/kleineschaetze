@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
 
 :root {
   --color-primary: #eff7f6;
@@ -15,7 +17,7 @@ html, body {
   margin: 0;
   padding: 0;
   position: relative;
-  font-family: sans-serif;
+  font-family: 'Fredoka', sans-serif;
 }
 
 body::before {
