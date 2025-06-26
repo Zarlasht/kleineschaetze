@@ -21,3 +21,10 @@ export async function logout() {
     cookieStore.delete("userid");
     redirect("/login");
 }
+
+
+export async function deleteMemory(memoryId: number){
+    await sql`DELETE FROM memories WHERE id = ${memoryId}`;
+    redirect("/dashboard");
+
+}
