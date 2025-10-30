@@ -1,5 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌸 Kleineschätze
 
+Ein digitaler Erinnerungsort für Kinder — entwickelt mit **Next.js**, **TypeScript** und **Tailwind CSS**.  
+Eltern können Zeichnungen, Fotos, Meilensteine und Zitate ihrer Kinder sicher speichern und mit Liebe gestalten.
+
+---
+
+## ✨ Features
+
+- **Kinderübersicht:** Zeigt alle Kinder im Dashboard („Meine Kinder“)  
+- **Kind-Detailseite:** Beim Klick auf ein Kind werden seine Erinnerungen angezeigt  
+- **Designfarben:**  
+  - Sanftes Rosa für Mädchen  
+  - Sanftes Blau für Jungen  
+- **Erinnerungs-Karten:** Mit Bild, Titel und „Mehr sehen“-Button → öffnet ein Modal mit Beschreibung  
+- **Mehrsprachigkeit:** Deutsch & Türkisch (geplant: Persisch)  
+- **Server Actions:** zum Hinzufügen neuer Kinder  
+- **API Routes:** für das Verwalten der Erinnerungen  
+- **1:n Datenmodell:** Ein Kind kann viele Erinnerungen besitzen  
+
+---
+
+## 🛠️ Technologien
+
+- [Next.js](https://nextjs.org/)  
+- [TypeScript](https://www.typescriptlang.org/)  
+- [Tailwind CSS](https://tailwindcss.com/)  
+- [Neon.tech PostgreSQL](https://neon.tech/) (optional)  
+- API Routes & Server Actions  
+
+---
 ## Getting Started
 
 First, run the development server:
